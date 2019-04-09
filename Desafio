@@ -1,0 +1,16 @@
+n = int(input("Altura da pirâmide:"))
+cont = 0
+cont_invertido = n
+alterna = False
+while cont <= n:
+	equacao = (1+(2*(cont-1)))
+	asterisco = "*"*equacao
+	espaco_asterisco = " "*cont_invertido
+	print(f"{espaco_asterisco}{asterisco}{espaco_asterisco}")
+	if alterna == True:
+		espaco_underscores = " "*equacao
+		underscores = "-"*cont_invertido
+		print(f"{underscores}{espaco_underscores}{underscores}")
+	alterna = True
+	cont = cont+1
+	cont_invertido = cont_invertido-1
